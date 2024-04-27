@@ -1,17 +1,36 @@
-import React, { SyntheticEvent } from "react";
- 
- 
+import React, { useEffect, useState } from "react";
+import getAllCategory from "../api/category"
+import { Link} from 'react-router-dom';
 
 interface Props {}
 
-const CategoryList: React.FC<Props> = ({
-}: Props): JSX.Element => {
-  return (
-       <ul>
-          <li> <a href="/category">category</a></li>
-          <li> <a href="/product">Products</a></li>
-       </ul>
-  );
-};
+const CategoryList =  () => {
+  const [categories,setCategory] = useState([])
+  const fetchDataAsync =  
+    async () => {
+      let category =  await getAllCategory()
+      if(category.data.length>0){
+      setCategory(category.data)
+      }
+    }
+   
+  
+  
+    useEffect(()=>{
+      fetchDataAsync();
+    }, []); 
+    
+    
+
+ return (
+    <ul> 
+       {
+          categories.map((menu:any) => (
+                <li key={menu.name}> <Link to={"category/"+menu.name}> {menu.name} </Link></li>
+            ))
+       }
+   </ul>     
+ )
+}
 
 export default CategoryList;

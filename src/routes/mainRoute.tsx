@@ -6,7 +6,7 @@
  import ProductPage from  "../pages/product";
  import About from  "../pages/about";
  import ContactUs from  "../pages/contactus";
-
+ import Login from  "../pages/login";
 
   export const  router = createBrowserRouter([
     {
@@ -15,10 +15,11 @@
       errorElement: <ErrorPage />,
       children:[
          { index: true, path: "/", element: <HomePageHero />},
-         { path: "/category", element: <Category />},
+         { path: "/category/:CategoryName", element: <Category />},
          { path: "/product", element: <ProductPage />},
          { path: "/about", element: <About />},
          { path: "/contactus", element: <ContactUs />},
+         { path: "/login", element: <Login />},
       ]
     }
   ]);

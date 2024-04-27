@@ -1,19 +1,13 @@
-import React, { SyntheticEvent } from "react";
- 
+import React from "react";
  
 
-interface Props {}
-
-const MainMenu: React.FC<Props> = ({
-}: Props): JSX.Element => {
+const MainMenu  = (): JSX.Element => {
   return (
-    <div>
-       <ul id='mainMenu'>
+       <ul id='topMenu' className="nav pull-right">
           <li> <a href="/">Home</a></li>
           <li> <a href="/about">about</a></li>
           <li> <a href="/contactus">contact us</a></li>
        </ul>
-    </div>
   );
 };
 

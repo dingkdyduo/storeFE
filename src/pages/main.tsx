@@ -1,26 +1,28 @@
 import { Outlet , Link , useLoaderData , Form} from "react-router-dom";
 import CategoryList from "../component/categoryList"
-import MainMenu from "../component/mainMenu"
+import MyAccoutSideNav from "../component/myAccoutSideNav"
+import Header from "../component/header"
 
  
 export default function MainPage() {
-    //const { contacts } = useLoaderData();
     return (
       <>
-        <div id='pageheader'> 
-           <div id='logo'> Logo here </div>
-           <div>   <MainMenu /> </div>
-         </div>
-        <hr/>
-        <div>
-            <div id="sidebar"> 
-                 <CategoryList />
+         
+        <div id='header'>
+            <Header /> 
+        </div>   
+        <div id='mainBody'>
+          <div className='container'>
+            <div className="row"> 
+                <div id="sideBar" className='span3'>
+                <MyAccoutSideNav />
+                <CategoryList />
+                </div>
+                <div id='mainContent' className="span9">  <Outlet /> </div>
             </div>
-            <div id="detail">
-              <Outlet />
-            </div>      
-       </div>
-        
+          </div>
+        </div>   
+        <div id='footerSection'></div>   
       </>
     );
   }
