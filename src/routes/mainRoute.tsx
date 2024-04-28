@@ -7,6 +7,7 @@
  import About from  "../pages/about";
  import ContactUs from  "../pages/contactus";
  import Login from  "../pages/login";
+ import Dashboard from  "../pages/dashboard";
 
   export const  router = createBrowserRouter([
     {
@@ -16,10 +17,11 @@
       children:[
          { index: true, path: "/", element: <HomePageHero />},
          { path: "/category/:CategoryName", element: <Category />},
-         { path: "/product", element: <ProductPage />},
+         { path: "/:product/:sku", element: <ProductPage />},
          { path: "/about", element: <About />},
          { path: "/contactus", element: <ContactUs />},
          { path: "/login", element: <Login />},
+         { path: "/dashboard", element: <Dashboard />},
       ]
     }
   ]);

@@ -11,11 +11,10 @@ const { isAuthenticated, user } = useSelector((state:any) => state.auth);
 console.log(isAuthenticated, user)
  return (
     <div> 
-      Hi Guest!: 
       {
          isAuthenticated ? 
-            (<b> { user.name } </b>) :
-            (<Link to="login" > Login  here </Link>)
+            (<div>  Hi!:<b> { user.name } </b> <Link to="dashboard" >dashboard </Link> </div> ) :
+            (<div><span> Hi Guest!:  </span><Link to="login" > Login  here </Link> </div>)
       }
       <hr/>
    </div>     
