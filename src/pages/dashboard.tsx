@@ -12,11 +12,11 @@ const Dashboard = () => {
     }
   }, [navigate, isAuthenticated])
   return (
-
      <div>
-        <Link to="orders" >my profile </Link> 
-        <Link to="orders" >Change password </Link> 
-        <Link to="orders" > Login  here </Link> 
+       <div className="thumbnail"> my profile </div>
+       <div className="thumbnail"> order history </div>
+       <div className="thumbnail"> Change password </div>
+        
     </div>
   )
 }

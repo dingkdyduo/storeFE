@@ -5,7 +5,8 @@
 .clr{clear:both;}
 .cntr{text-align:center}
 .marginLess{margin:0}
-#logoArea, #logoArea a{line-height:49px;}
+#logoArea, #logoArea a{line-height:49px;padding:0}
+#logoArea {background: url(../images/logoBG.png) }
 #logoArea .btn, #logoArea .btn-group {margin-top: 0;}
 #logo {padding-right:28px;}
 #welcomeLine{padding: 8px 0 4px}
@@ -41,6 +42,7 @@
 #accordion2, #legalNotice, .justify, #mainCol{text-align:justify}
 #myCarousel .carousel-control{display:none}
 #myCarousel:hover .carousel-control{display:block}
+
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {color:#fff; background-color: #CF0007;text-shadow: none;}
 /* Footer section--------------- */
 #footerSection {background: #202020;color: white;padding: 28px 0 44px;margin-top: 20px;border-top: 1px solid #444;}
@@ -122,3 +124,8 @@
 }
 
 #mainContent{min-height:450px}
+
+#topMenu li{padding-left:10px;}
+
+.productDetails{float:left;margin-left:10px}
+.prodImages{float:left;width:350px;border:1px solid gray;min-height:300px}

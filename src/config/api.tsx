@@ -1,17 +1,21 @@
+import { AnyCnameRecord } from "dns";
 
 export const  config: any = 
 {
 
-    "local":{
+    local:{
      "storeApiHost":"https://storeapi-opa9.onrender.com"
     },
-    "development":{
+    test:{
         "storeApiHost":"https://storeapi-opa9.onrender.com"
     },
-    "staging":{
+    development:{
         "storeApiHost":"https://storeapi-opa9.onrender.com"
     },
-    "production":{
+    staging:{
+        "storeApiHost":"https://storeapi-opa9.onrender.com"
+    },
+    production:{
         "storeApiHost":"https://storeapi-opa9.onrender.com"
     }
 }

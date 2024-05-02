@@ -9,7 +9,7 @@ const {categoryName} = props
 const [products, setProducts] = useState("");
 
 const fetchDataAsync =  
-  async () => {
+useCallback(async () => {
     let products =  await getFilterProduct({"category_name":categoryName})
       
     let listItems = "no product found";
@@ -21,9 +21,8 @@ const fetchDataAsync =
    }
     setProducts(listItems)
 
-  }
-
-
+  },[categoryName]
+)
  
 useEffect(()=>{
   fetchDataAsync();

@@ -43,7 +43,12 @@ $(".slider ul li:last-child").prependTo($(".slider ul"));
 
 
   return (
+    <div>
     <div className="slider" onLoad={prepareSlider}>
+         <div className="thumbnail"> test </div>
+    </div>
+    <div className="slider" onLoad={prepareSlider}>
+
 
     <a href="#0" onClick={moveRight} className="next control">Next</a>
     <a href="#0" onClick={moveLeft} className="prev control">Prev</a>
@@ -61,6 +66,7 @@ $(".slider ul li:last-child").prependTo($(".slider ul"));
       <Button className="btn">Autoplay</Button>
     </div>
   
+  </div>
   </div>
   )
 }

@@ -17,11 +17,11 @@
       children:[
          { index: true, path: "/", element: <HomePageHero />},
          { path: "/category/:CategoryName", element: <Category />},
-         { path: "/:product/:sku", element: <ProductPage />},
          { path: "/about", element: <About />},
          { path: "/contactus", element: <ContactUs />},
          { path: "/login", element: <Login />},
          { path: "/dashboard", element: <Dashboard />},
+         { path: "/:product/:sku", element: <ProductPage />},
       ]
     }
   ]);

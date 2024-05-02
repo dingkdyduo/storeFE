@@ -4,7 +4,7 @@ export default class apiCall {
 
     public apiHost:string = ""
 
-    constructor(apiHost:string){
+    constructor(apiHost: string){
       this.apiHost= apiHost
     }
 
@@ -68,6 +68,23 @@ export default class apiCall {
 
 
     getAll(path:string): Promise<any> {
+		const url: string =  `${this.apiHost}${path}`
+		return axios
+			.get(url,{
+				headers: {
+					'Content-Type': 'application/json',
+					 //Authorization: `Bearer ${token}`,
+				},
+			})
+			.then( response => {
+				return   response
+			})
+			.catch((error) => {
+				console.warn(error, '<<<< API ERROR');
+				return  error 
+			});
+	}
+	get(path:string): Promise<any> {
 		const url: string =  `${this.apiHost}${path}`
 		return axios
 			.get(url,{

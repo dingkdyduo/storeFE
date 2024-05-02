@@ -11,20 +11,11 @@ const Header: React.FC<Props> = ({
   return (
  
 <div id="header">
-<div className="container">
- <div id="logoArea" className="navbar navbar-inner">
-<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" className="btn btn-navbar">
-	<span className="icon-bar"></span>
-	<span className="icon-bar"></span>
-	<span className="icon-bar"></span>
-</a>
-  <div className="">
-    <a className="brand" href="#"><img src={logo} alt="Bootsshop"/></a>
-	 
-   <MainMenu />
+  <div id="logoArea" className="navbar navbar-inner">
+  <a className="brand" href="#"><img src={logo} alt="Bootsshop"/></a>
+  <MainMenu />
+    
   </div>
-</div>
-</div>
 </div>
 
 )};

@@ -18,7 +18,6 @@ const authSlice = createSlice({
       state.isAuthenticated = false;
       state.user = null;
     }
-    // register user reducer...
   },
 })
 export const { login, logout } = authSlice.actions;

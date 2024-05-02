@@ -22,7 +22,6 @@ const persistConfig = {
 }
 
 const reducers = combineReducers(appReducers);
-
 const persistedReducer = persistReducer(persistConfig, reducers);
  
 const store = configureStore({
